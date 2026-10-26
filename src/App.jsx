@@ -304,7 +304,7 @@ function ReceiptPaper({ sale, settings }) {
 
 function ReceiptModal({ sale, settings, onClose, isNew }) {
   return (
-    <div className="no-print" style={{ position: 'fixed', inset: 0, background: 'rgba(43,29,18,0.55)', display: 'flex', alignItems: 'flex-end', justifyContent: 'center', zIndex: 50 }}>
+    <div className="receipt-modal-overlay" style={{ position: 'fixed', inset: 0, background: 'rgba(43,29,18,0.55)', display: 'flex', alignItems: 'flex-end', justifyContent: 'center', zIndex: 50 }}>
       <div style={{ background: 'var(--base)', width: '100%', maxWidth: 440, maxHeight: '92vh', overflowY: 'auto', borderRadius: '20px 20px 0 0', padding: 16 }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 12 }}>
           <span style={{ fontWeight: 600, fontSize: 15 }}>{isNew ? 'Sale complete' : 'Receipt'}</span>
