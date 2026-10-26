@@ -128,13 +128,58 @@ function GlobalStyle() {
         background-position: -8px -8px;
         background-repeat: repeat-x;
       }
-      @media print {
-        body * { visibility: hidden; }
-        #receipt-print-area, #receipt-print-area * { visibility: visible; }
-        #receipt-print-area { position: absolute; top: 0; left: 0; width: 100%; padding: 0; }
-        .no-print { display: none !important; }
-        .receipt-paper-print { box-shadow: none !important; max-width: 320px; margin: 0 auto; }
+            @page {
+        size: 80mm auto;
+        margin: 0;
       }
+
+      @media print {
+        html, body, #root {
+          width: 80mm !important;
+          min-width: 0 !important;
+          margin: 0 !important;
+          padding: 0 !important;
+          background: #fff !important;
+        }
+
+        body * {
+          visibility: hidden;
+        }
+
+        #receipt-print-area,
+        #receipt-print-area * {
+          visibility: visible;
+        }
+
+        #receipt-print-area {
+          position: absolute !important;
+          top: 0 !important;
+          left: 0 !important;
+          width: 72mm !important;
+          max-width: 72mm !important;
+          margin: 0 !important;
+          padding: 0 !important;
+        }
+
+        #receipt-print-area .receipt-paper-print {
+          width: 72mm !important;
+          max-width: 72mm !important;
+          margin: 0 !important;
+          padding: 3mm !important;
+          box-sizing: border-box !important;
+          border: 0 !important;
+          box-shadow: none !important;
+          color: #000 !important;
+          background: #fff !important;
+        }
+
+        #receipt-print-area .receipt-paper-print * {
+          color: #000 !important;
+        }
+
+        .no-print {
+          display: none !important;
+        }
     `}</style>
   );
 }
