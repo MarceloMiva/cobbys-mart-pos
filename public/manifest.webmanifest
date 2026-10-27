@@ -1,0 +1,25 @@
+
+{
+  "id": "/",
+  "name": "Cobby's Mart POS",
+  "short_name": "Cobbys POS",
+  "description": "Cobby's Mart Point of Sale",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#ffffff",
+  "theme_color": "#166534",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
